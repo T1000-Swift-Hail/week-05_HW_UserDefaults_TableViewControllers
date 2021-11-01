@@ -41,7 +41,7 @@
     self.present(alert, animated: true)
     
     
-### Userdefaults
+### UserDefaults
       
       //getting an instance of UserDefaults
       let defaults = UserDefaults.standard
