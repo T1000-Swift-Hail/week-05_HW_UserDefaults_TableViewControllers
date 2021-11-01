@@ -52,7 +52,7 @@
       //saving the array
       defaults.set(array, forKey: "SavedArray")
       
-      //get the array
+      //load  the saved array
       if let savedArray = defaults.array(forKey: "SavedArray") as? [String]{
             array = savedArray
        }
