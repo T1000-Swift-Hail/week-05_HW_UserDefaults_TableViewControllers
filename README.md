@@ -60,5 +60,7 @@
        
        
 ### Your app should look similar to this:
-![alt text]()
+![alt text](https://github.com/T1000-Swift-Hail/week-05_HW_UserDefaults_TableViewControllers/blob/main/Simulator%20Screen%20Shot%20-%20iPhone%208%20-%202021-11-01%20at%2011.11.25.png?raw=true)
+
+![alt text](https://github.com/T1000-Swift-Hail/week-05_HW_UserDefaults_TableViewControllers/blob/main/Simulator%20Screen%20Shot%20-%20iPhone%208%20-%202021-11-01%20at%2011.18.51.png?raw=true)
 
