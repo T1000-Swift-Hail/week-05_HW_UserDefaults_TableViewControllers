@@ -7,7 +7,7 @@
 
 import UIKit
 
-class TableViewController: UITableViewController {
+class TableViewController: UITableViewController  {
     
     var soppingList = ["apple","orenge","mangos","pears"]
     let defaults = UserDefaults.standard
@@ -16,9 +16,10 @@ class TableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        defaults.set(array, forKey: "SavedArray")
-        if let savedArray = defaults.array(forKey: "SavedArray") as? [String]{
-            self.array = savedArray
+//        defaults.set(soppingList, forKey: "SavedArray")
+        if let setItmes = defaults.array(forKey: "SavedArray") as? [String]{
+            self.soppingList = setItmes
+            
         }
     }
     
@@ -47,6 +48,7 @@ class TableViewController: UITableViewController {
             if let purchase = alert.textFields?.first?.text {
                 print("Your purchases: \(purchase)")
                 self.soppingList.append(purchase)
+                self.defaults.set(self.soppingList, forKey: "SavedArray")
                 self.tableView.reloadData()
                 
             }
@@ -83,7 +85,7 @@ class TableViewController: UITableViewController {
             
             soppingList.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .automatic)
-            
+            self.defaults.set(self.soppingList, forKey: "SavedArray")
             
         }
         
