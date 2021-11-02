@@ -10,15 +10,15 @@ import UIKit
 class TableViewController:UITableViewController {
     
     var items = ["Apples","Oranges","mangos","pears"]
-    let Defaluts = UserDefaults.standard
+    let defaluts = UserDefaults.standard
     var array = ["Hello", "World"]
     override func viewDidLoad() {
         super.viewDidLoad()
         
         
-        Defaluts.set(array, forKey: "SavedArray")
-        if let savedArray = Defaluts.array(forKey: "SavedArray") as? [String] {
-            self.array = savedArray
+        // Defaluts.set(array, forKey: "SavedArray")
+        if let setItmes = defaluts.array(forKey: "SavedArray") as? [String] {
+            self.items = setItmes
         }
     }
     @IBAction func editTable(_ sender: UIBarButtonItem) {
@@ -31,26 +31,40 @@ class TableViewController:UITableViewController {
     
     @IBAction func addButton(_ sender: UIBarButtonItem) {
         
-        var textFiled = UITextField()
-        let alert = UIAlertController(title: "Write the Product you want", message: "", preferredStyle: .alert)
-        let action = UIAlertAction(title: "OK", style: .default) { action in
+        //  var textFiled = UITextField()
+        let alert = UIAlertController(title: "What are you puying?", message: nil, preferredStyle: .alert)
+        
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        alert.addTextField(configurationHandler: {textFild in textFild.placeholder = "Write here what you need..."
             
-            guard let text = textFiled.text else {return}
-            self.items.append(text)
-            self.Defaluts.set(self.items, forKey: "items")
+        })
+        
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
+if let buying = alert.textFields?.first?.text {
+            
+            print("Your buying: \(buying)")
+            
+            self.items.append(buying)
+            
+            self.defaluts.set(self.items, forKey: "SavedArray")
+            
             self.tableView.reloadData()
             
-        }
-        let cuncel = UIAlertAction(title: "cuncel", style: .cancel, handler: nil)
-        alert.addTextField { textFiledSet in
-            textFiledSet.placeholder = "Write here what you need..."
-            textFiled = textFiledSet
-        }
-        alert.addAction(cuncel)
-        alert.addAction(action)
+
         
-        present(alert, animated: true, completion: nil)
+        }
+
+        }
+                                 )
+        )
+    
+    
+    
+
+        self.present(alert, animated: true)
     }
+
+
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
@@ -68,6 +82,7 @@ class TableViewController:UITableViewController {
         
         return cell
     }
+    
     override func tableView(_ tableView: UITableView,commit editingStyle: UITableViewCell.EditingStyle,forRowAt indexPath: IndexPath) {
         
         if editingStyle == .delete {
@@ -75,11 +90,11 @@ class TableViewController:UITableViewController {
             items.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .automatic)
             
-            
+        }
         }
         
         
-    }
+    
     override func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath,to destinationIndexPath: IndexPath) {
         if sourceIndexPath == destinationIndexPath {
             return
@@ -92,3 +107,4 @@ class TableViewController:UITableViewController {
 }
 
 
+    

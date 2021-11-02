@@ -54,7 +54,7 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="jgz-7g-LY9">
                             <connections>
-                                <action selector="additmes:" destination="Ria-7A-tUi" id="MqA-Aw-Uix"/>
+                                <action selector="addButton:" destination="Ria-7A-tUi" id="It9-vf-pA6"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
