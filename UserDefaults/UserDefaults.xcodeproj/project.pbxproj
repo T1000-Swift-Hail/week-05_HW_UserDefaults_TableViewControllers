@@ -13,6 +13,7 @@
 		44B26DC9272FF5090068106E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44B26DC7272FF5090068106E /* Main.storyboard */; };
 		44B26DCB272FF50B0068106E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 44B26DCA272FF50B0068106E /* Assets.xcassets */; };
 		44B26DCE272FF50B0068106E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44B26DCC272FF50B0068106E /* LaunchScreen.storyboard */; };
+		44B26DD8273008E40068106E /* Table View controllerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B26DD7273008E40068106E /* Table View controllerTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		44B26DCA272FF50B0068106E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		44B26DCD272FF50B0068106E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		44B26DCF272FF50B0068106E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		44B26DD7273008E40068106E /* Table View controllerTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Table View controllerTableViewController.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				44B26DC1272FF5090068106E /* AppDelegate.swift */,
 				44B26DC3272FF5090068106E /* SceneDelegate.swift */,
 				44B26DC5272FF5090068106E /* ViewController.swift */,
+				44B26DD7273008E40068106E /* Table View controllerTableViewController.swift */,
 				44B26DC7272FF5090068106E /* Main.storyboard */,
 				44B26DCA272FF50B0068106E /* Assets.xcassets */,
 				44B26DCC272FF50B0068106E /* LaunchScreen.storyboard */,
@@ -141,6 +144,7 @@
 				44B26DC6272FF5090068106E /* ViewController.swift in Sources */,
 				44B26DC2272FF5090068106E /* AppDelegate.swift in Sources */,
 				44B26DC4272FF5090068106E /* SceneDelegate.swift in Sources */,
+				44B26DD8273008E40068106E /* Table View controllerTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
