@@ -31,6 +31,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Shopping List" id="Oxx-4S-rAZ">
+                        <barButtonItem key="leftBarButtonItem" systemItem="edit" id="dJu-xv-CsA">
+                            <connections>
+                                <action selector="EditList:" destination="fRW-ZZ-uUY" id="wnA-z6-n2A"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="VCU-UW-a4p">
                             <connections>
                                 <action selector="addItem:" destination="fRW-ZZ-uUY" id="L9y-k1-axw"/>

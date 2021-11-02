@@ -19,6 +19,18 @@ class TableViewController: UITableViewController {
             self.itemsOfShopping = setItems
         }
     }
+    
+   
+    @IBAction func EditList(_ sender: UIBarButtonItem) {
+        if tableView.isEditing {
+            tableView.isEditing = false
+        } else {
+            tableView.isEditing = true
+        }
+    }
+    
+    
+    
     @IBAction func addItem(_ sender: UIBarButtonItem) {
         
         var textFiled = UITextField()
@@ -75,5 +87,8 @@ class TableViewController: UITableViewController {
             itemsOfShopping.insert(movedItem, at: destinationIndexPath.row)
             
         }
+        
+        
+        
     }
 }
